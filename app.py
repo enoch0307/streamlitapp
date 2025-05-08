@@ -12,9 +12,9 @@ model = {}
 model["multi"] = joblib.load("Multi.pkl")
 model["binary"] = joblib.load("Binary.pkl")
 
-data = pd.read_csv("data.csv")
-data = data.iloc[:, :]
-data = data.dropna(axis=0, how='any')
+#data = pd.read_csv("data.csv")
+#data = data.iloc[:, :]
+#data = data.dropna(axis=0, how='any')
 #data = data.drop('stage',axis=1)
 
 title = "Screening for Geriatric Dysphagia Patients (Multi-class & binary)"
