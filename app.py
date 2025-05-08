@@ -105,19 +105,6 @@ if m==M[0] and button:
     
     with st.expander("", True):
         st.plotly_chart(fig, use_container_width=True)
-        
-    explainer = shap.Explainer(model[M1[0]])  
-    shap_values = explainer.shap_values(pre)
-    
-    shap.force_plot(explainer.expected_value[0], shap_values[0][:,0], pre, matplotlib=True)
-    for text in plt.gca().texts:
-        if "=" in text.get_text():
-            text.set_rotation(-15)
-            text.set_va('top')
-        text.set_bbox(dict(facecolor='none', alpha=0.5, edgecolor='none'))
-    
-    with st.expander("", True):
-        st.pyplot(plt.gcf(), use_container_width=True)
     
     d1 = pd.DataFrame({
         "feature-name":model[M1[0]].feature_names_in_, 
@@ -162,19 +149,6 @@ elif button:
     
     with st.expander("", True):
         st.plotly_chart(fig, use_container_width=True)
-        
-    explainer = shap.TreeExplainer(model[M1[1]])  
-    shap_values = explainer.shap_values(pre)
-    
-    shap.force_plot(explainer.expected_value[0], shap_values[0][:,1], pre, matplotlib=True)
-    for text in plt.gca().texts:
-        if "=" in text.get_text():
-            text.set_rotation(-15)
-            text.set_va('top')
-        text.set_bbox(dict(facecolor='none', alpha=0.5, edgecolor='none'))
-    
-    with st.expander("", True):
-        st.pyplot(plt.gcf(), use_container_width=True)
     
     d1 = pd.DataFrame({
         "feature-name":model[M1[1]].feature_names_in_, 
