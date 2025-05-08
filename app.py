@@ -49,7 +49,7 @@ style = """
     border-radius: 0.5rem;
 """
 
-st.sidebar.image("logo1.png", use_column_width=True)
+st.sidebar.image("logo1.png", use_container_width=True)
 
 st.sidebar.markdown(f"<div style='{header_style}'>Model select</div>", unsafe_allow_html=True)     
 m = st.sidebar.selectbox("Select Prediction Model Type", M, label_visibility="collapsed")
