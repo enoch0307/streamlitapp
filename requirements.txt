@@ -6,3 +6,4 @@ numpy
 catboost
 shap
 matplotlib
+openpyxl
