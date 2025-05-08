@@ -32,7 +32,7 @@ T = ["Screening for Geriatric Dysphagia Patients (Multi-class)",
 
 header_style = """
     text-align: center;
-    font-size: 20px;
+    font-size: 28px;
     border-bottom: 1px solid black;
     margin-bottom: 15px;
 """
